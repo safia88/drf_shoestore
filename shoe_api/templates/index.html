@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Store</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is my Shoe Store</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Brand</th>
+                <th>Size</th>
+                <th>Material</th>
+                <th>Manufacturer</th>
+                <th>Color</th>
+                <th>Shoe Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+            <tr>
+                <td>{{item.brand}}</td>
+                <td>{{item.size}}</td>
+                <td>{{item.material}}</td>
+                <td><a href="/api/manufacturer/{{item.manufacturer.id}}/"> {{item.manufacturer}}</a></td>
+                <td><a href="/api/shoe_color/{{item.color.id}}/"> {{item.color}}</a></td>
+                <td><a href="/api/shoe_type/{{item.shoe_type.id}}/"> {{item.shoe_type}}</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>
