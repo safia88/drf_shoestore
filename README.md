@@ -1,6 +1,6 @@
 # drf_shoestore
+# Front-End : (https://github.com/safia88/drf_shoestore_frontend)
 ### Steps:
-1. `pip3 install djangorestframework`
 2. `python manage.py makemigrations api`
 3. `python manage.py migrate`
 4. `python manage.py bootstrap_data`

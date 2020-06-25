@@ -7,6 +7,8 @@ authors = ["Safia Ali <safialiusa@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 django = "^3.0.7"
+djangorestframework = "^3.11.0"
+django-cors-headers = "^3.4.0"
 
 [tool.poetry.dev-dependencies]
 
