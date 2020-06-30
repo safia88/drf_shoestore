@@ -28,3 +28,5 @@ class ShoeColorViewSet(viewsets.ModelViewSet):
 class ManufacturerViewSet(viewsets.ModelViewSet):
     queryset = Manufacturer.objects.all()
     serializer_class = ManufacturerSerializer
+
+# Joe had a pet cat named dojo growing up on the African Savanna
